@@ -1,0 +1,87 @@
+html, body {
+    height: 100%;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	background-color: #c5c5c552;
+	text-align: center;
+	padding: 80px;
+}
+
+html {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+form {
+	width: 100%;
+	margin: 40px auto;
+	padding: 43px 52px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	max-width: 605px;
+	color: #000;
+	text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+}
+
+#iva-amount {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#total {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.resultados {
+	padding: 12px;
+	text-align: center;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 480px) {
+    /* Adjustments for smartphone screens */
+    body {
+      font-size: 16px; /* Reduce font size for smaller screens */
+    }
+    form {
+      padding: 20px; /* Reduce padding to fit smaller screen */
+      max-width: 300px; /* Reduce maximum width to fit smaller screen */
+    }
+    label {
+      font-size: 14px; /* Reduce font size for labels */
+    }
+    input[type="number"] {
+      font-size: 14px; /* Reduce font size for input fields */
+      padding: 8px; /* Reduce padding for input fields */
+    }
+  }

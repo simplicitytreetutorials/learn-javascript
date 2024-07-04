@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Generador de nombres</title>
+</head>
+<body>
+    <section>        
+        <div class="container">            
+            <h1>Random picker app</h1>              
+            <textarea id="nombres" cols="80" placeholder="Escribe cada nombre en una línea diferente"></textarea><br>
+            <button id="btn-obtener">Obtener nombre</button>
+            <div id="resultado"></div>
+        </div>            
+    </section>
+
+     <!-- Ventana modal -->
+     <div class="modal" id="modal">
+        <div class="modal-content">
+            <div class="spinner text-primary" role="status"></div> <br>
+            <p>Un momento por favor...</p>
+        </div>
+    </div>    
+</body>
+</html>

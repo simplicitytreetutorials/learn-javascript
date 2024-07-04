@@ -1,0 +1,326 @@
+/* ESTILOS GENERALES */
+html, body {
+  height: 100%
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.09rem
+}
+
+/* Modificar el modelo de cajas de CSS */
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit
+}
+
+/* Resetear márgenes y padding */
+* {
+  margin: 0;
+  padding: 0
+}
+
+/* Centrar elementos en pantalla */
+.container {
+  width: 100%;
+  margin: 0 auto
+}
+
+header {
+  min-height: 100vh;
+  background: -webkit-gradient(linear, right top, left bottom, from(rgba(182, 127, 23, 0.28)), to(rgba(0, 0, 0, 0.7))), url(../images/pexels-fotoaibe-1571460.jpg) center/cover no-repeat fixed;
+  background: -o-linear-gradient(right top, rgba(182, 127, 23, 0.28), rgba(0, 0, 0, 0.7)), url(../images/pexels-fotoaibe-1571460.jpg) center/cover no-repeat fixed;
+  background: linear-gradient(to left bottom, rgba(182, 127, 23, 0.28), rgba(0, 0, 0, 0.7)), url(../images/pexels-fotoaibe-1571460.jpg) center/cover no-repeat fixed;
+  overflow: auto;
+}
+
+/* Barra de navegación */
+#navigation {
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+padding: 30px 2.5em 30px;
+position: fixed;
+-webkit-transition: 0.5s ease-in-out;
+          -o-transition: 0.5s ease-in-out;
+          transition: 0.5s ease-in-out;
+}
+
+#navbar-toggle {
+color: #ffffff;
+font-size: 2rem;
+cursor: pointer;
+}
+
+#navbar-toggle:hover {
+color: #ddd;
+}
+
+.banner {
+width: 100%;
+margin: 168px auto;
+color: #fff;
+height: 540px;
+text-align: center;
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-pack: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+-webkit-box-align: center;
+    -ms-flex-align: center;
+        align-items: center;
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+    -ms-flex-direction: column;
+        flex-direction: column;
+}
+
+.banner h1 {
+font-size: 3.3rem;
+padding: 12px 0;
+}
+
+.banner p {
+font-size: 1.15rem;
+}
+
+.btn.btn-white {
+color: #fff;
+cursor: pointer;
+margin: 44px;
+display: inline-block;
+border: 1px solid #fff;
+padding: 10px 1em;
+-webkit-text-decoration: navajowhite;
+        text-decoration: navajowhite;
+}
+
+.btn.btn-white:hover {
+background-color: #928d8db2;
+}
+
+.logoStyle {
+font-family: "DM Sans", sans-serif;
+font-size: 2.1rem;
+color: #ffffff;
+text-decoration: none;
+font-weight: bold;
+}
+
+#about, #services, #recent-works, #testimonials {
+height: 80vh;
+}
+
+#about h2, #services h2, #recent-works h2, #testimonials h2  {
+text-align: center;
+font-size: 2rem;
+font-weight: 500;
+padding: 12px 0;
+}
+
+article section:nth-child(2), section:nth-child(4) {
+background-color: #f1f5f8;
+}
+
+/*
+=============== 
+Sidebar
+===============
+*/
+
+/* Oculta el sidebar por defecto */
+.sidebar {
+display: none;
+}
+
+/* Estilos para el botón toggle del sidebar */
+.sidebar-toggle {
+position: fixed;
+top: 2rem;
+right: 3rem;
+font-size: 2rem;
+background: transparent;
+border-color: transparent;
+cursor: pointer;
+-webkit-animation: bounce 2s ease-in-out infinite;
+        animation: bounce 2s ease-in-out infinite;
+}
+
+/* Animación de bounce */
+@-webkit-keyframes bounce {
+0% {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+50% {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+100% {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+}
+
+/* Animación de bounce para navegadores compatibles con WebKit */
+@keyframes bounce {
+0% {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+50% {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+100% {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+}
+
+/* Estilos para la parte superior del sidebar */
+.sidebar-header {
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-pack: right;
+    -ms-flex-pack: right;
+        justify-content: right;
+padding: 1rem 1.5rem;
+}
+
+/* Estilos para el sidebar */
+.sidebar {
+  position: fixed; /*Posición fija en la esquina izquierda*/
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #1d1c1c;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 1rem 1fr 1rem auto;
+  grid-template-rows: auto 1fr auto;
+  row-gap: 1rem;
+  -webkit-transform: translate(-100%);
+      -ms-transform: translate(-100%);
+          transform: translate(-100%);
+          -webkit-transition: 0.5s ease-in-out;
+          -o-transition: 0.5s ease-in-out;
+          transition: 0.5s ease-in-out; /*Transición para mostrar el sidebar*/
+  }
+
+/* Estilos para mostrar el sidebar */
+  .show-sidebar {
+  -webkit-transform: translate(0);
+      -ms-transform: translate(0);
+          transform: translate(0); /* Mueve el sidebar a su posición inicial (a la izquierda)*/
+  -webkit-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out; /*Transición para mostrar el sidebar*/
+  }
+  
+  /* Estilos para el botón de cierre del sidebar */
+  .close-btn {
+  font-size: 1rem;
+  color: #fff;
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  }
+  
+  /* Estilos para el icono del botón de cierre del sidebar */
+  .fas.fa-times {
+  padding: 12px;
+  font-size: 2rem;
+  vertical-align: middle;
+  }
+
+/* Estilos para cuando se hace clic en el botón de cierre del sidebar */
+.close-btn:hover {
+  color: #ccc;
+}
+
+.links a {
+display: block;
+font-size: 1.5rem;
+text-transform: capitalize;
+padding: 1rem 1.5rem;
+color: #fff;
+text-decoration: none;
+}
+
+.links a:hover {
+background: #cccccc40;
+color: #fff;
+-webkit-transition: 0.5s ease-in-out;
+          -o-transition: 0.5s ease-in-out;
+          transition: 0.5s ease-in-out;
+}
+
+.logoStyle-menu {
+color: white;
+text-decoration: none;
+font-family: "DM Sans", sans-serif;
+font-size: 1.4rem;
+font-weight: 600;
+}
+
+/* PIE DE PÁGINA */
+footer {
+background-color: #121018;
+}
+
+#copyright {
+color: #ffffff;
+text-align: center;
+font-size: 0.8rem;
+border-top: 1px solid #272323;
+padding: 12px 0;
+}
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 676px) {
+.sidebar {
+  width: 400px;
+}
+}
+
+@media screen and (max-width: 900px) {
+header {
+  min-height: 66vh;
+}
+
+.banner {
+  width: 100%;
+  padding: 0 1em;
+}
+
+.banner h1 {
+  font-size: 2rem;
+}
+
+.logoStyle {
+  font-size: 1.8rem;
+}
+
+#navbar-toggle {
+  font-size: 1.6rem;
+}
+
+#piedDePagina {
+  padding: 30px 3em;
+}
+}
